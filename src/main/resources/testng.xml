@@ -1,0 +1,10 @@
+<suite name="Selenium Tutorial With Maven">
+
+    <test name="Maven tests">
+        <packages>
+            <package name="com.ebot7.tests"></package>
+        </packages>
+
+    </test>
+
+</suite>

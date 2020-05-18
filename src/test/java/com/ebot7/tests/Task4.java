@@ -1,33 +1,35 @@
+package com.ebot7.tests;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class Task4 {
 
-    WebDriver driver;
+    WebDriver driver = null;
 
     @BeforeMethod
     public void setup() {
         System.out.println("-------------Task 4------------");
         System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
 
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
 
+        driver.get("https://agoldoffish.wordpress.com/criminal-minds-opening-and-closing-quotes/");
         driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 
-        driver.get("https://agoldoffish.wordpress.com/criminal-minds-opening-and-closing-quotes/");
     }
 
     @Test
     public void quotesByGideon() {
+        System.out.println("Running Tests");
         List<WebElement> quotesGideon = driver.findElements(By.xpath("//p/strong[text()='Gideon']/ancestor::p"));
         int quotes_size = quotesGideon.size();
 
@@ -60,7 +62,7 @@ public class Task4 {
         driver.switchTo().window(al.get(0));
     }
 
-    @AfterTest
+    @AfterMethod
     public void tearDown(){
         driver.close();
     }
