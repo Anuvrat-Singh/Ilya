@@ -1,0 +1,9 @@
+2020-05-18 14:01:24,239 INFO  [main] class:18 - Browser is launched
+2020-05-18 14:01:31,387 INFO  [main] class:23 - Opening URL
+2020-05-18 14:01:43,179 INFO  [main] class:69 - Closing the browser
+2020-05-18 14:01:43,622 INFO  [main] class:18 - Browser is launched
+2020-05-18 14:03:17,416 INFO  [main] class:18 - Browser is launched
+2020-05-18 14:03:25,000 INFO  [main] class:23 - Opening URL
+2020-05-18 14:03:26,853 INFO  [main] class:42 - Plagiarism check not implemented
+2020-05-18 14:03:26,856 INFO  [main] class:69 - Closing the browser
+2020-05-18 14:03:27,407 INFO  [main] class:18 - Browser is launched
